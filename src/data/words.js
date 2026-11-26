@@ -1,0 +1,80 @@
+/**
+ * words.js
+ * Contains 100 solution words and a list of valid guesses.
+ * All words are five letters long and arranged alphabetically.
+ */
+
+// 100 words that can be selected as the answer
+export const SOLUTION_WORDS = [
+  "APPLE", "BEACH", "BRAIN", "BRAVE", "BREAD", "BRICK", "BRING", "BROWN", "CHAIR", "CHARM",
+  "CHASE", "CHEAP", "CLEAN", "CLEAR", "CLOUD", "CRANE", "CROSS", "CROWN", "DANCE", "DREAM",
+  "DRINK", "DRIVE", "EARTH", "ELDER", "EMPTY", "ENJOY", "FAITH", "FANCY", "FIELD", "FLAME",
+  "FLASH", "FLOOR", "FLOUR", "FRESH", "FRUIT", "GIANT", "GRACE", "GRASS", "GREEN", "GUARD",
+  "HAPPY", "HEART", "HORSE", "HOUSE", "HUMAN", "IMAGE", "INDEX", "JUICE", "KNIFE", "KNOCK",
+  "LAUGH", "LEARN", "LIGHT", "LUCKY", "MAGIC", "MANGO", "MARCH", "MATCH", "MONEY", "MOUSE",
+  "NIGHT", "NOBLE", "OCEAN", "ORDER", "PAINT", "PAPER", "PARTY", "PEACE", "PIANO", "PLACE",
+  "PLANT", "PLATE", "POINT", "POWER", "QUEEN", "QUICK", "QUIET", "RADIO", "REACH", "READY",
+  "RIGHT", "ROBOT", "ROUND", "SHARE", "SHEEP", "SHINE", "SMILE", "SOUND", "SPACE", "STORM",
+  "TABLE", "TIGER", "TRAIN", "TRUST", "UNITY", "VALUE", "VOICE", "WATER", "WORLD", "YOUTH"
+];
+
+// Valid five-letter guesses from A to Z
+export const VALID_GUESSES = [
+  "ABUSE", "ACTOR", "ACUTE", "ADMIT", "ADOPT", "ADORE", "ADULT", "AFTER", "AGENT", "AGREE",
+  "AHEAD", "ALARM", "ALBUM", "ALERT", "ALIEN", "ALIVE", "ALLOW", "ALONE", "ALONG", "ALTER",
+  "AMBER", "ANGEL", "ANGER", "ANGLE", "ANGRY", "APPLY", "ARENA", "ARGUE", "ARISE", "ARRAY",
+  "ASIDE", "ASSET", "AUDIO", "AVOID", "AWARD", "AWARE", "AWFUL", "BACON", "BADGE", "BAKER",
+  "BALMY", "BANJO", "BASIC", "BASIL", "BASIS", "BATCH", "BEAST", "BEGIN", "BEING", "BELOW",
+  "BENCH", "BERRY", "BIRTH", "BLACK", "BLAME", "BLANK", "BLAST", "BLEED", "BLEND", "BLESS",
+  "BLIND", "BLOCK", "BLOOD", "BOARD", "BOOST", "BOOTH", "BOUND", "BOWEL", "BOXER", "BRAND",
+  "BREAK", "BRIEF", "BULKY", "BURST", "BUYER", "CABIN", "CABLE", "CANDY", "CARRY", "CAUSE",
+  "CEDAR", "CHAIN", "CHALK", "CHEEK", "CHEER", "CHEST", "CHIEF", "CHILD", "CHILI", "CHOIR",
+  "CHUNK", "CIVIL", "CLAIM", "CLASH", "CLASS", "CLICK", "CLIMB", "CLOCK", "CLOSE", "COACH",
+  "COAST", "COLOR", "COMIC", "COUNT", "COURT", "COVER", "CRAFT", "CRAZY", "CREAM", "CRIME",
+  "CYCLE", "DAILY", "DAIRY", "DEATH", "DEBUT", "DECOR", "DELAY", "DEPTH", "DEVIL", "DIARY",
+  "DIRTY", "DOING", "DOUBT", "DOZEN", "DRAFT", "DRAMA", "DRAWN", "DRESS", "DROVE", "DULLY",
+  "EAGER", "EAGLE", "EARLY", "EIGHT", "ELITE", "EMAIL", "EMBED", "EMOJI", "ENTRY", "EQUAL",
+  "ERROR", "EVENT", "EVERY", "EXACT", "EXIST", "EXTRA", "FABLE", "FACES", "FACTS", "FALSE",
+  "FAVOR", "FEAST", "FENCE", "FEVER", "FIBER", "FIGHT", "FINAL", "FIXED", "FLAIR", "FLEET",
+  "FLESH", "FLOAT", "FOCUS", "FORCE", "FORGE", "FORTH", "FORTY", "FORUM", "FOUND", "FRAME",
+  "FRANK", "FRONT", "FROST", "GAMES", "GAMER", "GHOST", "GIVEN", "GLASS", "GLOBE", "GLOOM",
+  "GLORY", "GLOVE", "GOING", "GRAND", "GRANT", "GREAT", "GREET", "GROSS", "GROUP", "GROWN",
+  "GUEST", "GUIDE", "HABIT", "HALLS", "HANDY", "HARSH", "HAVEN", "HEARD", "HEAVY", "HEDGE",
+  "HELLO", "HENCE", "HONEY", "HONOR", "HORNS", "HOTEL", "HOUND", "HOVER", "IDEAL", "IDEAS",
+  "IDOLS", "INNER", "INPUT", "IRONY", "ISSUE", "JELLY", "JEWEL", "JOINT", "JOKER", "JUDGE",
+  "KNACK", "KNEEL", "KNOWN", "LABEL", "LARGE", "LASER", "LATER", "LEAVE", "LEGAL", "LEMON",
+  "LEVEL", "LIMIT", "LINEN", "LOCAL", "LODGE", "LOGIC", "LOOSE", "LOWER", "MAJOR", "MAKER",
+  "MAMMA", "MAPLE", "MAYBE", "MEANT", "MEDAL", "MEDIA", "MELON", "MERRY", "METAL", "MINOR",
+  "MODEL", "MODES", "MORAL", "MOTOR", "MOUNT", "MOVIE", "MUSIC", "NAIVE", "NAMED", "NERVE",
+  "NEVER", "NEWER", "NINTH", "NORTH", "NOTES", "NOVEL", "OFFER", "OLDER", "OLIVE", "ONION",
+  "OPERA", "ORBIT", "OTHER", "OTTER", "PAINT", "PANEL", "PANIC", "PATCH", "PEACH", "PENNY",
+  "PERCH", "PHONE", "PHOTO", "PIECE", "PILOT", "PITCH", "PIXEL", "PLACE", "PLAIN", "PLANK",
+  "POKER", "POLAR", "POUND", "PRESS", "PRICE", "PRIDE", "PRIME", "PRINT", "PRIZE", "PROOF",
+  "PULSE", "PURSE", "RADAR", "RAISE", "RANGE", "RAPID", "RATIO", "REACT", "REBEL", "REFER",
+  "REIGN", "RELAX", "REPLY", "RIDER", "RIFLE", "RIVER", "ROAST", "ROCKY", "ROUGE", "ROUGH",
+  "ROYAL", "RULER", "SAUCE", "SCALE", "SCENE", "SCOPE", "SCORE", "SCOUT", "SEVEN", "SHADE",
+  "SHAKE", "SHALL", "SHARP", "SHELL", "SHIFT", "SHOCK", "SHOWN", "SIGHT", "SILLY", "SINCE",
+  "SKILL", "SLEEP", "SLICE", "SLIDE", "SLOPE", "SMALL", "SMART", "SNAKE", "SNEAK", "SOLAR",
+  "SOLID", "SORRY", "SPARE", "SPEAK", "SPEED", "SPELL", "SPEND", "SPICE", "SPIKE", "SPINE",
+  "SPOKE", "SPORT", "STAFF", "STAGE", "STAIN", "STAKE", "START", "STEAK", "STEAL", "STEAM",
+  "STEEL", "STEEP", "STICK", "STILL", "STOCK", "STONE", "STORE", "STOVE", "STRAP", "STRAW",
+  "STRIP", "STUCK", "STYLE", "SUGAR", "SUITE", "SUPER", "SWEET", "SWIFT", "SWING", "SWORD",
+  "TEACH", "TEARS", "TEASE", "THEME", "THERE", "THICK", "THIEF", "THING", "THINK", "THIRD",
+  "THORN", "THOSE", "THREE", "THROW", "TIGHT", "TIMER", "TITLE", "TOAST", "TODAY", "TOKEN",
+  "TOTAL", "TOUCH", "TOUGH", "TOWER", "TRACE", "TRACK", "TRADE", "TREND", "TRIAL", "TRICK",
+  "TROOP", "TRUCK", "TULIP", "TUNER", "TWICE", "UNCLE", "UNDER", "UPPER", "UPSET", "URBAN",
+  "USAGE", "USUAL", "VAGUE", "VALID", "VALVE", "VAPOR", "VEGAN", "VENUE", "VERSE", "VIDEO",
+  "VIRUS", "VISIT", "VITAL", "VIVID", "WAGON", "WASTE", "WATCH", "WEARY", "WEDGE", "WEIRD",
+  "WHEAT", "WHEEL", "WHERE", "WHILE", "WHITE", "WHOLE", "WIDEN", "WITCH", "WOMAN", "WORRY",
+  "WORTH", "WRITE", "WRONG", "XENON", "YACHT", "YEARS", "YIELD", "YOUNG", "ZEBRA", "ZONED"
+];
+
+// Combine the two word lists to check guesses
+const ALL_WORDS = new Set([...SOLUTION_WORDS, ...VALID_GUESSES]);
+
+// Check whether a guess is in the word list
+export function isValidGuess(word) {
+  return ALL_WORDS.has(word);
+}
+
+export default SOLUTION_WORDS;
